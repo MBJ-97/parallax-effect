@@ -41,7 +41,7 @@ export default function Parallax() {
     if (scrollY >= scrollThresholds[index] && scrollY < scrollThresholds[index + 1]) {
       return 0;
     } else if (scrollY >= scrollThresholds[index + 1]) {
-      return 1 - (scrollY - scrollThresholds[index + 1]) * 0.00125;
+      return 1 - (scrollY - scrollThresholds[index + 1]) * 0.0014;
     } else {
       return 1;
     }
@@ -54,7 +54,7 @@ export default function Parallax() {
             <div className="1 w-full h-screen sticky top-0 inline-block"
             ref={sectionRefs[i]}>
                 <motion.div
-                className="fade-out-element transition ease-in duration-75"
+                className="fade-out-element transition ease-in duration-100"
                 style={{ opacity: calculateOpacity(i) }}
                 >
                     <ScrollItem key={i} num={i}/>
